@@ -9,18 +9,23 @@ app = Flask(__name__)
 
 baud_rate = 115200
 
-def find_arduino_port(vid, pid):
+def find_arduino_port(serial_number):
     ports = serial.tools.list_ports.comports()
     for p in ports:
-        if p.vid == vid and p.pid == pid:
+        if p.serial_number == serial_number:
             return p.device
     return None
 
-# VID, PID
-LF_port = find_arduino_port('2341', '0043')
-RF_port = find_arduino_port('2341', '0043')
-RB_port = find_arduino_port('2341', '0043')
-LB_port = find_arduino_port('2341', '0043')
+# Serial Numbers
+LF_serial = '343331236353516030E1'
+RF_serial = '34331323635351806012'
+RB_serial = '3433312363535160C0F0'
+LB_serial = '34331323635351208252'
+
+LF_port = find_arduino_port(LF_serial)
+RF_port = find_arduino_port(RF_serial)
+RB_port = find_arduino_port(RB_serial)
+LB_port = find_arduino_port(LB_serial)
 
 if LF_port:
     LF = serial.Serial(LF_port, baud_rate)
