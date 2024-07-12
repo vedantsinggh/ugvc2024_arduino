@@ -17,9 +17,9 @@ def find_arduino_port(serial_number):
     return None
 
 # Serial Numbers
-LF_serial = '343331236353516030E1'
+LF_serial = '343313236353516030E1'
 RF_serial = '34331323635351806012'
-RB_serial = '3433312363535160C0F0'
+RB_serial = '3433132363535160C0F0'
 LB_serial = '34331323635351208252'
 
 LF_port = find_arduino_port(LF_serial)
