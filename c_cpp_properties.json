@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Arduino",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Users/family/Documents/Arduino/libraries/**",
+                "/Users/family/Documents/Arduino/hardware/arduino/avr/cores/arduino",
+                "/Users/family/Documents/Arduino/hardware/arduino/avr/variants/standard"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/local/bin/avr-gcc", // Adjust based on your installation
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
